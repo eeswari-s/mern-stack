@@ -1,0 +1,111 @@
+1.What is HTML?
+                 HTML (HyperText Markup Language) is the standard language used to create and structure webpages.
+It tells the browser how to display text, images, links, and other content on a website.
+
+2.Role of HTML in web development:
+                      HTML is the foundation of every website. It gives structure and meaning to the content on a webpage. Without HTML, browsers wouldn’t know how to display text, images, or links properly.
+                      Structuring content:
+
+Defines headings, paragraphs, lists, images, links, tables, forms, etc.
+
+Example: <h1> for main heading, <p> for paragraph.
+
+Providing semantics:
+
+Helps browsers and search engines understand the content.
+
+Example: <article>, <nav>, <footer> describe the purpose of content.
+
+Integrating with other technologies:
+
+Works with CSS (for styling) and JavaScript (for interactivity).
+
+Example: HTML creates buttons, CSS styles them, JS makes them clickable.
+
+Building web applications:
+
+Modern web apps (like e-commerce or social media sites) start with HTML structure.
+
+
+📓	HTML syntax (tags, attributes, elements)
+1. HTML Tag:
+                Tags are the building blocks of HTML.
+             Usually, they come in opening and closing form.
+             Example:
+                     <p>This is a paragraph.</p> 
+
+ 2. HTML Element:
+             An element includes the opening tag, content, and closing tag together.
+           Example:
+         <p>Hello World!</p>      
+
+3. HTML Attribute:
+            Attributes provide additional information about an element.
+            Placed inside the opening tag.
+            Example:
+            <a href="https://www.webpage.com">webpage</a>                       
+
+4.HTML Heading Tags
+            ⭐Headings are used to define the titles and subtitles on a webpage.
+            ⭐HTML has 6 levels of headings: <h1> to <h6>.
+              <h1> -is the largest and most important,
+             <h6> is the smallest and least important.
+
+Example:
+
+<h1>Main Title</h1>
+<h2>Sub Title</h2>
+<h3>Section Title</h3>
+<h4>Subsection</h4>
+<h5>Minor Heading</h5>
+<h6>Small Heading</h6>
+
+
+
+1. <span>
+👉Used to group inline content for styling or scripting.
+👉Does not create a new line.
+Example:
+<p>This is a <span style="color: red;">red text</span> inside a paragraph.</p>
+
+2. <b> (Bold Text)
+👉Makes text bold.
+Example:
+<p>This is <b>bold</b> text.</p>
+
+3. <br> (Line Break)
+👉Inserts a line break (new line) inside text.
+👉Self-closing tag.
+Example:
+<p>Hello<br>World!</p>
+
+4. <small>
+👉Makes text smaller than normal.
+Example:
+<p>This is <small>small text</small> inside a paragraph.</p>
+
+5. <mark>
+👉Highlights text with a yellow background.
+Example:
+<p>This is <mark>highlighted</mark> text.</p>
+
+6. <img> (Image Tag)
+👉Used to display images on a webpage.
+👉Self-closing tag.
+Example:
+<img src="image.jpg" alt="My Image" width="200">
+Attributes:
+src → image path
+alt → alternate text if image not found
+width / height → size of image
+
+7. <video> (Video Tag)
+👉Used to embed videos.
+Example:
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+ 
+</video>
+Attributes:
+controls → shows play/pause buttons
+autoplay, loop, muted → optional behaviors

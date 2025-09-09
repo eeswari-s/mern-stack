@@ -1,0 +1,63 @@
+1. <div>
+Block-level container
+Used to group content for styling or scripting
+Example:
+<div style="border: 1px solid black; padding: 10px;">
+  <h2>My Section</h2>
+  <p>This is a paragraph inside a div.</p>
+</div>
+
+
+2. Command Line (Terminal Basics)
+Not an HTML tag, but important for web development
+Used to run code, create files, and manage projects
+Common commands:
+cd folder_name → change directory
+mkdir folder_name → create folder
+touch file_name.html → create file (Mac/Linux)
+code . → open current folder in VS Code
+
+
+3. <ul> (Unordered List)
+Creates a bulleted list
+Example:
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+  <li>Cherry</li>
+</ul>
+
+
+
+
+4. <ol> (Ordered List)
+Creates a numbered list
+Example:
+<ol>
+  <li>First step</li>
+  <li>Second step</li>
+  <li>Third step</li>
+</ol>
+
+
+
+
+5. <table>
+Used to display tabular data
+Contains rows (<tr>) and cells (<td> or <th>)
+Example:
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Eswari</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>Ravi</td>
+    <td>27</td>
+  </tr>
+</table>

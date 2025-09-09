@@ -1,0 +1,300 @@
+5. Conquer Lists in HTML
+1. <ol> – Ordered List
+
+Creates a numbered list
+
+Each item is written inside <li> tag
+
+Example:
+
+<ol>
+  <li>Wake up</li>
+  <li>Brush teeth</li>
+  <li>Have breakfast</li>
+</ol>
+
+
+Output:
+
+Wake up
+
+Brush teeth
+
+Have breakfast
+
+2. <ul> – Unordered List
+
+Creates a bulleted list
+
+Each item is written inside <li> tag
+
+Example:
+
+<ul>
+  <li>Milk</li>
+  <li>Bread</li>
+  <li>Eggs</li>
+</ul>
+
+
+Output:
+
+Milk
+
+Bread
+
+Eggs
+
+3. <li> – List Item
+
+Used to define each item inside <ol> or <ul>
+
+Cannot be used alone outside lists
+
+Example:
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+4. Nested Lists
+
+A list inside another list
+
+Helps organize content in hierarchy
+
+Example (Mixed nested list):
+
+<ol>
+  <li>Fruits
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Cherry</li>
+    </ul>
+  </li>
+  <li>Vegetables
+    <ul>
+      <li>Carrot</li>
+      <li>Spinach</li>
+    </ul>
+  </li>
+</ol>
+
+
+Output:
+
+Fruits
+
+Apple
+
+Banana
+
+Cherry
+
+Vegetables
+
+Carrot
+
+Spinach
+
+
+
+
+Semantic HTML Tags
+
+Semantic tags describe the meaning of the content to browsers, developers, and search engines.
+Example tags: <header>, <nav>, <main>, <section>, <article>, <aside>, <footer>
+
+1. <header>
+
+Represents the top section of a page or a section
+
+Usually contains logo, heading, navigation links
+
+Example:
+
+<header>
+  <h1>My Website</h1>
+  <p>Welcome to my website!</p>
+</header>
+
+2. <nav>
+
+Represents navigation links
+
+Example:
+
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+3. <main>
+
+Represents the main content of the page
+
+There should be only one <main> per page
+
+Example:
+
+<main>
+  <h2>About Us</h2>
+  <p>Our company specializes in web development.</p>
+</main>
+
+4. <section>
+
+Represents a section of content
+
+Can have a heading and related content
+
+Example:
+
+<section>
+  <h2>Services</h2>
+  <p>We offer web design, SEO, and marketing services.</p>
+</section>
+
+5. <article>
+
+Represents independent content, like blog posts or news articles
+
+Example:
+
+<article>
+  <h2>Blog Post Title</h2>
+  <p>This is the content of the blog post.</p>
+</article>
+
+6. <aside>
+
+Represents sidebar content, like ads or links
+
+Example:
+
+<aside>
+  <h3>Related Links</h3>
+  <ul>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+  </ul>
+</aside>
+
+7. <footer>
+
+Represents the bottom section of a page
+
+Usually contains copyright, contact info, social links
+
+Example:
+
+<footer>
+  <p>&copy; 2025 My Website. All rights reserved.</p>
+</footer>
+
+
+
+
+css:
+1. What is CSS?
+
+CSS (Cascading Style Sheets) is used to style HTML content.
+
+Controls layout, colors, fonts, spacing, and design of web pages.
+
+Simple Note:
+
+HTML is the structure, CSS is the design! 🎨
+
+2. Types of CSS
+a) Inline CSS
+
+CSS is written inside the HTML element using style attribute.
+
+Example:
+
+<p style="color: red; font-size: 20px;">Hello World!</p>
+
+
+Pros: Quick for single element
+Cons: Hard to maintain for many elements
+
+b) Internal (Embedded) CSS
+
+CSS is written inside <style> tag in the <head> of HTML.
+
+Example:
+
+<head>
+  <style>
+    p {
+      color: blue;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <p>Hello World!</p>
+</body>
+
+
+Pros: Works for one page
+Cons: Cannot be reused across multiple pages
+
+c) External CSS
+
+CSS is written in a separate .css file and linked using <link> tag.
+
+Example:
+style.css
+
+p {
+  color: green;
+  font-size: 16px;
+}
+
+
+index.html
+
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p>Hello World!</p>
+</body>
+
+
+Pros: Can be reused for multiple pages, easy to maintain
+
+3. CSS using ID & Class
+a) ID Selector
+
+Uses #idname to style a unique element
+
+Example:
+
+<p id="special">Hello World!</p>
+
+#special {
+  color: purple;
+  font-weight: bold;
+}
+
+b) Class Selector
+
+Uses .classname to style multiple elements
+
+Example:
+
+<p class="highlight">Text 1</p>
+<p class="highlight">Text 2</p>
+
+.highlight {
+  color: orange;
+  font-size: 18px;
+}

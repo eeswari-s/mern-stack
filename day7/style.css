@@ -1,0 +1,19 @@
+/*this is a single line comment*/
+*{
+    background-image: url('../assets/image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.myclass{
+    color:rgb(5, 3, 71);
+    background-color:#bd0aa274;
+    text-align:center;
+    border:2px  red;
+    padding:0px;
+    margin:0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:100px;
+}
