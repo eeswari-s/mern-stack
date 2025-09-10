@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.block
+{
+    display: block;
+    background: lightblue;
+    margin: 5px 0;
+}
+#inline{
+    display:inline;
+    background-color: pink;
+}
+
+/* div{
+  display:inline-block;
+  background-color:red;
+    width:1000px;
+    height:50px;
+    margin:5px;
+    } */
+
+.span{
+    color:blue;
+
+  background-color: tomato;
+  padding-top: 5px;
+  padding-left: 800px;
+}
+
+
+
+/*position*/
+
+.box
+{
+    width:600px;
+    height:300px;
+    background-color: darksalmon;
+    position: relative;
+    
+}
+.relative
+{
+    margin: 0%;
+    background-color: lightgreen;
+    position: relative;
+    top: -80px;
+
+} 
+
+
+.absolute
+{
+    width:100px;
+    height:200px;
+    background-color: lightblue;
+    position: absolute;
+    top: 500px;
+    left: 400px;
+}

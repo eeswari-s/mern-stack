@@ -1,0 +1,5 @@
+Display types:
+1.Block
+2.inline
+3.inline-Block
+4.none
