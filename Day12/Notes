@@ -1,0 +1,8 @@
+media query:
+syntax:
+
+@media (condition)
+{
+    //css rules
+}
+
