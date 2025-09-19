@@ -18,7 +18,9 @@ body
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background: #f2f2f2;
+    background: #211ed4;
+background: linear-gradient(90deg,rgb(168, 167, 217) 24%, rgba(166, 162, 224, 1) 50%); 
+
     padding: 15px 30px;
     border-bottom: 1px solid #ccc;
     position: sticky;
