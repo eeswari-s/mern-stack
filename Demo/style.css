@@ -347,9 +347,12 @@ color: slateblue;
 
 .contact-form button:hover
 {
-    background: #940ae4;
+    width: 200px;
+    height: 50px;
+    background: #0616c8;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
 }
 
 
