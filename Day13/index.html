@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+     
+
+.container{
+      background-color: lightgrey;
+           
+         }
+         .box{
+          width: 100px;
+          height: 100px;
+          background-color: lightgreen;
+           transition-duration:5s; 
+              transition-property:width; 
+              border-radius: 50%;
+                 /* transition-timing-function: ease-in;  */
+                /* transition-timing-function: ease-out; */
+                /* transition-timing-function: ease-in-out; */
+                /* transition-timing-function: linear; */
+                /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+                /* transition-delay: 5s;  */
+                /* transition: :background-color 5s  eas-in width  ; */
+                animation-name: circle;
+                animation-duration: 25s;
+                animation-play-state: running;
+         }
+         @keyframes circle{
+            0%{
+               border-radius: 0%;
+               background-color: rgb(222, 102, 59);
+            }
+            25%
+            {
+                background-color:brown;
+                width:500px;
+                height:500px;
+            }
+            50%{
+               border-radius: 50%;
+               background-color: yellow;
+            }
+            100%{
+               border-radius: 0%;
+               background-color: rgb(55, 17, 222);
+            }
+         }
+
+
+         .box:hover{
+            background-color: coral;
+            width: 300px;
+            height: 300px;
+
+         }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="box"></h1>
+    </div>
+</body>
+</html>
