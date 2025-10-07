@@ -1,0 +1,3 @@
+ var              mernstack =                     "students";
+//   |                  |                                |
+ // varialble           variable name                    variable value
