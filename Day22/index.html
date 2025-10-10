@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body{
+            font-family: arial, sans-serrif;
+            background-color: #f9fafb;
+            margin:0;
+            padding: 20px;
+
+        }   
+        .grid-container
+        {
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:15px;
+            padding: 15px;
+        }
+        .box1
+        {
+            background-color: #93c5fd;
+            padding: 1.25rem;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 0.5rem;
+            font-weight: 700;
+
+        }
+        .box2
+        {
+            background-color: #86efac;
+             padding: 1.25rem;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 0.5rem;
+            font-weight: 700;
+        }
+        .box3
+        {
+            background-color: #f9a8d4;
+             padding: 1.25rem;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 0.5rem;
+            font-weight: 700;
+        }
+        /*position*/
+        .static-box{
+            position:static ;
+            background-color: #93c5fd;
+           padding: 20px;
+           margin: 10px;
+        }
+        .relative-box{
+            position: relative;
+            top:20px;
+            left:30px;
+            background-color: #86efac;
+           padding: 20px;
+           margin: 10px;
+        }
+        .parent
+        {
+            position: relative;
+            background-color: #fef3c7;
+            height: 200px;
+            width: 300px;
+            padding: 20px;
+        }
+        .abosulute-box{
+            position: absolute;
+            top:0;
+            right: 0;
+            background-color: #f9a8d4;
+            padding: 10px;
+        }
+       .fixed-box{
+        position: fixed;
+        top:0;
+        left: 0;
+        background-color: #60a5fa;
+        padding: 10px;
+        color: white;
+       text-align: center;
+       }
+      .sticky-container{
+
+        height: 200px;
+        overflow-y: scroll;
+        border: 2px solid gray;
+        padding: 10px;
+      }
+      .sticky-box{
+        position: sticky;
+        top:0;
+        background-color: #fca5a5;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+    <div class="grid-container ">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        
+    </div>
+    <div class="grid grid-cols-3 gap-4 p-4">
+        <div class="bg-blue-300 p-5 text-white text-center font-bold rounded-lg">Box1</div>
+         <div class="bg-green-300 p-5 text-white text-center font-bold rounded-lg">Box1</div>
+          <div class="bg-pink-300 p-5 text-white text-center font-bold rounded-lg">Box1</div>
+    </div>
+    <!--position-->
+    <div class="static-box">This is static</div>
+    <div class="relative-box">This is relative</div>
+
+    <div class="parent">
+    <div class="absolute-box">This is absolute</div></div>
+    <div class="fixed-box">This is fixed</div>
+    <div class="sticky-container">
+    <h1 class="sticky-box">heade</h1>
+    <p>para1</p>
+    <p>para2</p>
+    <p>para3</p>
+    <p>para4</p>
+        
+    </div>
+    <div class="static bg-blue-300 p-5 m-2">This is static</div>
+    <div class="relative top-5 left-8 bg-green-300 p-5 m-2">This is relative</div>
+
+    <div class="relative bg-yellow-100 h-[200px] w-[300px] p-5">
+    <div class="absolute top-0 right-0 bg-pink-300 p-2">This is absolute</div></div>
+    <div class="fixed-box">This is fixed</div>
+    <div class="sticky-container">
+    <h1 class="sticky-box">heade</h1>
+    <p>para1</p>
+    <p>para2</p>
+    <p>para3</p>
+    <p>para4</p>
+        
+    </div>
+  </body>
+</html>
