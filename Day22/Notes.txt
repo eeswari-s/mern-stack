@@ -1,0 +1,52 @@
+Function
+      syntax:
+            function functionname(){
+                //code 
+            }
+
+
+if (condition)
+{
+    //code
+}
+   if else
+   
+
+   if(condition)
+   {
+    //code
+   }
+   else{
+    //code
+   }
+
+
+   else if
+if(condition)
+{
+    //code
+}
+elseif(condition)
+{
+    //code
+}
+elseif()
+{
+    //code
+}
+else{
+
+}
+
+while
+while(condition)
+{
+
+}
+
+
+
+do while
+{
+
+}
