@@ -1,0 +1,126 @@
+switch:
+A switch is used when you want to check one value with many possible cases.
+
+Instead of writing multiple if...else if...else, we can use switch to make the code clean and easy to read.
+switch(expression){
+    case value 1:
+     // code 
+     break;
+     case 2:
+     //code 
+     break;
+     case 3:
+     //code
+     break;
+     default:
+     //code
+
+}
+
+let course = "taMiL";
+ 
+switch (course)
+{
+case "java":
+    console.log("java is a programming language");
+    break;
+case "python":
+    console.log("python is a programming language");
+    break;
+    case "mernstack":
+    console.log("mernstack is a programming language");
+    break;
+    case "c++":
+    console.log("c++ is a programming language");
+    break;
+    case "c":
+    console.log("c is a programming language");
+    break;
+    case "javascript":
+    console.log("javascript is a programming language");
+    break;
+    default:
+    console.log("not a programming language");
+}
+
+
+----------------------------------------------------------------------------------------------------------------------
+2.Ternary operator:
+It is a short and simple way to write an if...else statement in one line. 
+syntax:
+condition ? expression_if_true : expression_if_false;
+
+//----------------------------------------------------------------------
+let age1 = 17;
+if (age1 >= 18) {
+    console.log("eligible for vote");
+}
+else {
+    console.log("not eligible for vote");
+}
+//----------------------------------------------------------------------
+//Ternary operator Example:
+let age = 28;
+ 
+ let canVote= age>=18 ? "eligible for vote" : "not eligible for vote";
+console.log(canVote);
+//------------------------------------------------------------------------
+Nested if:
+Nested if means an if statement inside another if statement.
+example:
+let age=16;
+ let country="usa";
+  if(country ==="india")
+  {
+    if(age>=18)
+    {
+        console.log("eligible for vote");
+    }
+    else
+    {
+        console.log("not eligible for vote");
+    }
+  }
+  ----------------------------------------------------------------------
+  For:
+A for loop is used to repeat a task multiple times automatically.
+It starts with a beginning value, checks a condition, and then updates the value after each turn.
+The code inside the loop will run again and again until the condition becomes false.
+It helps us avoid writing the same code repeatedly
+
+
+  syntax:
+  for (initialization; condition; increment/decrement)
+  {
+    //
+  }
+  //--------------------------------------------------------------------------------
+  Array of object:
+Array = A list (like a collection of items).
+
+Object = A data structure with key-value pairs (like name: "Eswari", age: 22).
+
+So, Array of Objects means:
+
+A list that contains many objects.
+
+It is useful when you want to store multiple records, like students, products, users, movies, etc.
+
+
+
+  syntax:
+  [{},{},{}]
+
+
+  Examples:
+  let students =[
+  {name:"arun", age:24, course:"mca"},//-------0
+  {name:"bala", age:23, course:"bca"},//-------1
+  {name:"charan", age:22, course:"bsc"},//-----2
+  {name:"charan", age:22, course:"bsc"},
+  {name:"dhanush", age:21, course:"bcom"}
+]
+console.log(students);
+console.log(students[2].name);
+console.log(students[1].name);
+console.log(students[0].name);
