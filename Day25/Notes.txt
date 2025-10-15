@@ -1,0 +1,96 @@
+Forr each:
+        ⭐ orEach is used to loop through every item in an array.
+        ⭐It automatically goes one by one without using index or i++.
+        ⭐You just tell what to do for each item.
+        ⭐It is cleaner and shorter than a normal for loop.
+
+syntax:
+        array.forEach(function(value,index){
+
+                //code
+        });
+
+
+
+  //--------------------------------------------------------------------------------------------------
+  2.for...in
+            ⭐for...in is used to loop through the keys (property names) of an object.
+            ⭐It goes one by one through each property inside the object.
+            ⭐Useful when you want both key and value from an object.
+            ⭐Mostly used for objects, not arrays.
+
+
+
+  syntax:
+  for(let key in object)
+  {
+    //code
+  }   
+ 
+
+  //---------------------------------------------------------------------------------------------------------
+  3.   break :
+                 ⭐break is used to stop a loop immediately.
+                 ⭐When break runs, the loop ends, even if the condition is not finished.
+                 ⭐It is useful when you found what you were looking for.
+                 ⭐Mostly used in for, while, or switch statements.
+                 example:
+                 // for (let i=1;i<=5;i++)
+//  {
+//     if(i===3){
+    
+//         break;
+//     }
+//     console.log(i);
+// }
+  4.continue:
+  continue is used to skip the current iteration of a loop.
+When continue runs, that step is skipped, but the loop keeps running.
+Useful when you want to ignore a specific value but continue checking others.
+Works in for, while, or do...while loops.
+example:
+// for (let i=1;i<=5;i++)
+//  {
+//     if(i===3){
+    
+//         continue;
+//     }
+//     console.log(i);
+// }
+
+  //--------------------------------------------------------------------------------------------------------------
+  string:
+string
+// let name="Anil";
+// let message="welcome";
+//length
+// let text="mernstack";
+// console.log(text.length);
+
+
+let text = "Hello";
+console.log(text.length);
+let name = "eswari";
+console.log(name.toUpperCase()); 
+
+let city = "CHENNAI";
+console.log(city.toLowerCase());
+
+let sentence = "I love tea";
+console.log(sentence.replace("tea", "coffee"));
+
+let greet = "   Hello   ";
+console.log(greet.trim());
+
+let fruits = "Apple, Banana, Mango";
+console.log(fruits.split(", ")); 
+
+  //----------------------------------------------------------------------------------------------------------------
+  object
+  // console.log(person);
+// console.log(person.name);
+// console.log(person.age);
+// console.log(person.city);
+// console.log(person['name']);
+// console.log(person['age']);
+// console.log(person['city']);
