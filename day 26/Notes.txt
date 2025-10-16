@@ -81,6 +81,12 @@ reduce() is used to convert an entire array into a single value.
 syntax:
 array.reduce((accumulator, currentValue) => {
   return new value;
+  accumulator = running total / previous result
+
+currentValue = current element in the array
+
+initialValue = starting value (optional but mostly used)
+
 }, initialValue);
 
 Examle:
