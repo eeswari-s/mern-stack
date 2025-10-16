@@ -1,0 +1,109 @@
+Array:
+      Array is a box where you can store multiple values inside one variable.
+      Example:
+      let fruits = ["ram", "sham", "ghanshyam", "mohan",];
+array methods:
+    1.push:
+    Add at the end
+    Examples:
+    let fruits = ["Apple", "Mango"];
+fruits.push("Banana");
+console.log(fruits); 
+
+    2.pop:
+    Remove from end
+    Examples:
+    let fruits = ["Apple", "Mango", "Banana"];
+    fruits.pop();
+    console.log(fruits);
+
+    3.unshift:
+    Add at the start
+    Example:
+    let fruits = ["Mango", "Banana"];
+    fruits.unshift("Apple");
+    console.log(fruits);
+
+
+    4.shift:
+        Remove from start
+        Examples:
+        let fruits = ["Apple", "Mango", "Banana"];
+        fruits.shift();
+        console.log(fruits);
+
+
+    5.includes:
+         Check if value exists
+         Examples:
+               let fruits = ["Apple", "Mango", "Banana"];
+               console.log(fruits.includes("Mango")); // true
+            console.log(fruits.includes("Orange")); // false
+
+    6.indexof:
+         Get index
+         Examples:
+
+    7.slice:
+    Copy part of array
+    Examples:
+    let fruits = ["Apple", "Mango", "Banana", "Orange"];
+     let newFruits = fruits.slice(1, 3);
+     console.log(newFruits);
+    8.splice:
+    Add / Remove
+    Examples:
+    let fruits = ["Apple", "Mango", "Banana"];
+fruits.splice(1, 1); // Remove 1 element at index 1
+console.log(fruits);
+    9.forEach:
+Loop through array
+Examles:
+let fruits = ["Apple", "Mango", "Banana"];
+fruits.forEach(fruit => console.log(fruit));
+
+ 1.map():   
+Change each value
+Examles:
+et numbers = [1, 2, 3];
+let doubled = numbers.map(num => num * 2);
+console.log(doubled);
+ 2.filter():
+Select only matching values
+Examples:
+let numbers = [10, 25, 5, 30];
+let bigNumbers = numbers.filter(num => num > 10);
+console.log(bigNumbers); 
+
+
+ 3.reduce():
+reduce() is used to convert an entire array into a single value.
+syntax:
+array.reduce((accumulator, currentValue) => {
+  return new value;
+}, initialValue);
+
+Examle:
+let numbers = [10, 20, 30, 40];
+
+let total = numbers.reduce((sum, num) => {
+  return sum + num;
+}, 0);
+
+console.log(total);
+
+
+ //----------------------------------------------------------------------
+ Function
+     
+        syntax:
+              function functionName()
+              {
+                //code
+              }
+//----------------------------------------------------------
+Function types:
+               1.Function declaration 
+               2.Function Expression
+               3.Arrow Function
+               4.Anonymous Function
