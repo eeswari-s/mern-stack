@@ -1,0 +1,157 @@
+Function:
+   to perform a perticular task
+   to avoid repetation of code
+   return: to get the value outside of the function.
+
+   syntax: 
+   function functionName(parameters){
+    //code to be executed
+   }
+   Example:
+   function first()
+   {
+    console.log("function");
+   }
+   first();
+
+   Example 2:
+   function add(a,b)
+   {
+    return a+b;
+
+   }
+   console.log(add(5,2));
+
+
+   //--------------------------------------------------------------------------------------------------------------------------
+   Types of function :
+   1.Function declaration
+   2.Arrow function 
+   3.IIFE function
+   4.Function expression/anonymous Function
+   //-----------------------------------------------------------------------------------------------------------------------
+   2.Arrow function:
+      -Introduced in ES6 version
+      to reduce the code length
+      syntax:
+      var functionName =(paameter) =>{//code to be executed}
+
+      Examples:
+      var multi =(a,b) =>
+{
+    return a*b;
+}
+console.log(multi(5,6));
+
+3.IIFE(immediately Invoked Function Expression):
+      Immediately delete the values after using because it has limited memory sace
+      syntax:(function (){
+        code to be executed
+      })();
+
+      Examl:
+      (function(){
+    console.log("This is a self-invoking function!");
+})();
+
+
+   4.Function expression/anonymous Function:
+     Function without name,often used as argument to other function.
+     use case:mostly for if any events
+     syntax:var functionName = function(parameters){//code be executed}
+     
+   example:
+         var sub = function(a, b) {
+    return a - b;
+};
+console.log(sub(10, 4)); 
+//---------------------------------------------------------------------------------------
+Scope:
+     1.global Scope
+     2.function Scope
+     3.Block scope
+
+
+     //var - Declae a variabe(function scope/global scope)
+//let -Declae a blocked scope variable
+//const -  Declare a block-scoped constant(cannot be reassigned)
+// var a =100;
+//  var a=200;
+
+//  console.log(a+a);
+
+
+
+//  let a=10;
+//  function names()
+//  {
+//     let a=20;
+//     return a;
+//  }
+//  console.log(names());
+//  console.log(a);
+
+
+// const a=10;
+// function names()
+// {
+//     const a=20;
+//     return a;
+// }
+// console.log(names());
+// console.log(a);
+
+
+Examples:
+\
+//global scope 
+//can accesess inside the function
+let a = 10;
+
+function scope()
+{
+    let b = 20;//block scope
+    console.log(b);
+    console.log(a);
+}
+scope();
+console.log(b);
+
+
+//block scope
+{
+    let x = 10;
+    console.log(x); // 10
+}
+console.log(x); // ReferenceError: x is not defined
+
+
+//function scope 
+let a = 10;
+function scope()
+{
+    let b = 20;
+    console.log(b);//function scope
+    console.log(a);
+}
+scope();
+console.log(a);
+console.log(b); // This will cause an error because b is not defined in this scope
+
+-------------------------------
+
+let a = 10;//global scope
+function scope()
+{
+    let b = 20;
+    console.log(b);//function scope
+    console.log(a);
+}
+scope();
+console.log(a);
+// console.log(b); // This will cause an error because b is not defined in this scope
+ //-----------------------------------------------------------------------------------------------------------------------
+   Hoisting:
+   Hoisting in JavaScript means variable and function declarations are moved to the top of their scope before code execution.
+Functions are fully hoisted, so they can be called before their definition.
+var becomes undefined when accessed early, while let and const throw an error due to the Temporal Dead Zone.
