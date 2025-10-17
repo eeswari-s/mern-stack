@@ -1,0 +1,241 @@
+✍️ Topic 1: Variables & Data Types – Practice Questions
+
+1.Declare a variable age and assign your age to it. Print it in the console.
+
+2.What is the difference between let, var, and const? (Answer in one line each)
+
+3.Create a variable named isStudent with a boolean value and log its data type.
+
+4.Store your name in a variable and print "Hello, <your name>" using that variable.
+
+5.Swap the values of two variables a = 5 and b = 10 without using a third variable.
+
+6.Convert the string "123" to a number and check its type.
+
+7.What will be the output?
+
+let x = "10" + 5;
+console.log(x);
+
+
+8.What will be the output?
+
+let y = "10" - 5;
+console.log(typeof y);
+
+
+9.Declare a variable without assigning a value. What is its data type?
+
+10.Write one example each for:
+
+Number
+
+String
+
+Boolean
+
+Undefined
+
+Null
+--------------------------------------------------------------------
+✍️ Topic 2: Operators – Practice Questions
+
+1.What will be the output?
+
+let a = 10 + "5";
+console.log(a);
+
+
+2.What will be the output?
+
+let a = 10 - "5";
+console.log(a);
+
+
+3.Write a program to check if two numbers are equal using == and ===. Show the difference with an example.
+
+4.If x = 5, what will be the value of x++ and ++x? Explain the difference.
+
+5.Write a program to check if a number is between 10 and 20 using logical operators.
+
+6.What will be the output?
+
+console.log(5 > 3 && 2 < 1);
+
+
+7.What will be the output?
+
+console.log(5 > 3 || 2 < 1);
+
+
+8.What will be the output?
+
+console.log(!true);
+
+
+9.Write a program to find the remainder when 17 is divided by 3.
+
+10.If a = 10, write the result of:
+
+a += 5
+
+a -= 2
+
+a *= 3
+
+a /= 4
+--------------------------------------------------------------------------------------------------------
+✍️ Topic 4: Loops
+1Print numbers from 1 to 10 using a for loop.
+
+2.Print all even numbers between 1 and 50 using a while loop.
+
+3.Print the multiplication table of 5 (like 5 × 1 = 5 …) using a for loop.
+
+4.Find the sum of numbers from 1 to 100 using any loop.
+
+5.Print numbers from 10 to 1 (reverse order) using a for loop.
+
+6.Print only odd numbers from 1 to 30 using a while loop.
+
+7.Using a loop, print the output like:
+
+*
+**
+***
+****
+
+
+8.Find the factorial of a number (e.g., 5 → 120) using a loop.
+
+9.Iterate from 1 to 20 — if the number is divisible by 3, print "Fizz"; if by 5, print "Buzz"; if by both, print "FizzBuzz".
+
+10.Using a loop, count how many numbers between 1 and 100 are divisible by 7.
+--------------------------------------------------------------------------------------------------
+✍️ Topic 5: Functions
+1.Write a function greet() that prints "Hello, World!" when called.
+
+2.Write a function add(a, b) that returns the sum of two numbers. Call it and print the result.
+
+3.Write a function square(num) that returns the square of a number.
+
+4.Write a function isEven(num) that returns true if the number is even, otherwise false.
+
+5.Write a function factorial(n) that calculates the factorial of a number using a loop.
+
+6.Write a function reverseString(str) that returns the reversed string. Example → "hello" → "olleh"
+
+7.Write a function findMax(a, b, c) that returns the largest of three numbers.
+
+8.Write a function countVowels(str) that returns how many vowels are present in a string.
+
+9.Write a function capitalize(str) that converts the first letter of a string to uppercase. Example → "hello" → "Hello"
+
+10.Write a function calculateArea(radius) that returns the area of a circle. (Formula: π × r × r — use 3.14 for π)
+
+-----------------------------------------------------------------------------------------------------------------------------
+✍️ Topic 6: Arrays
+1.Create an array of 5 student names and print each name using a loop.
+
+2.Create an array of numbers and find the sum of all elements using a loop.
+
+3.Write a program to find the largest number in an array without using built-in functions.
+
+4.Write a program to count how many even numbers are present in an array.
+
+5.Write a program to reverse an array manually (without using .reverse()).
+
+6.Write a program to search for a number in an array. If found, print "Found", else "Not Found".
+
+7.Write a program to remove duplicates from an array manually (using loop).
+
+8.Write a program to merge two arrays without using .concat().
+
+Example: [1,2,3] and [4,5] → [1,2,3,4,5]
+
+9.Write a program to find the second largest number in an array.
+
+10.Write a program to check if a specific value exists in an array (without using .includes()).
+----------------------------------------------------------------------------------------------------------------
+Topic 7: Array Methods
+1.Using map(), create a new array where each number is doubled.
+
+Input: [1, 2, 3, 4]
+Output: [2, 4, 6, 8]
+2.Using filter(), get only the even numbers from an array.
+
+3.Using reduce(), find the sum of all numbers in an array.
+
+4.Using map(), convert an array of strings to uppercase.
+Input: ["apple", "banana"]
+Output: ["APPLE", "BANANA"]
+
+5.Using filter(), get names longer than 5 characters from an array of names.
+
+6.Using reduce(), find the maximum number in an array.
+
+7.Using map(), add "Mr." before each name in an array.
+Input: ["John", "Alex"]
+Output: ["Mr. John", "Mr. Alex"]
+
+8.Using filter(), remove all negative numbers from an array.
+
+9.Using reduce(), count how many times "apple" appears in an array.
+
+Input: ["apple", "banana", "apple", "orange"]
+Output: 2
+
+
+10.Combine filter() and map() to get only odd numbers from an array, then multiply them by 2.
+-----------------------------------------------------------------------------------------------------------------
+✍️ Topic 8: Strings & String Methods
+1.Write a program to find the length of a string without using .length directly.
+
+2.Write a program to convert a string to uppercase using .toUpperCase().
+
+3.Write a program to extract the first 5 characters of a string using .slice().
+
+4.Write a program to check if a string contains the word "hello" using .includes().
+
+5.Write a program to replace "JavaScript" with "JS" in the string "I love JavaScript" using .replace().
+
+6.Write a program to split a sentence into words using .split(" ").
+
+7.Write a program to count how many times the letter 'a' appears in a string.
+
+8.Write a program to reverse a string using a loop.
+
+9.Write a program to remove all spaces from a string.
+
+Input: "I am learning JS"
+Output: "IamlearningJS"
+
+
+10.Write a program to convert "hello world" to "Hello World" (capitalize first letter of each word).
+------------------------------------------------------------------------------------------------------------------
+✍️ Topic 9: Objects
+1.Create an object student with properties name, age, and grade. Print the object.
+
+2.Access and print the name property of the student object.
+
+3.Add a new property school to the student object and print the updated object.
+
+4.Update the grade property of the student object and print the updated object.
+
+5.Delete the age property from the student object and print the object.
+
+6.Check if the student object has a property name using hasOwnProperty().
+
+7.Iterate over all properties of the student object and print each key and value.
+
+8.Create an object person with a method greet() that prints "Hello, my name is <name>". Call the method.
+
+9.Merge two objects obj1 = {a:1, b:2} and obj2 = {b:3, c:4} into a new object and print it.
+
+10.Given an array of objects representing students, write a program to print the names of all students who scored more than 50.
+
+let students = [
+  {name: "Alice", score: 60},
+  {name: "Bob", score: 45},
+  {name: "Charlie", score: 75}
+];
