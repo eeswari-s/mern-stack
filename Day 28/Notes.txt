@@ -1,0 +1,238 @@
+Dom Manipulation:
+ •Change Text or Content
+ . Add or nremove elements
+ . change styles
+ .response to user actions
+
+
+
+ Example:
+  <h1 id="heading">hello</h1>
+     <button onclick="changeText()">click me</button>
+
+
+  <script>
+    function changeText()
+    {
+        document.getElementById("heading").textContent="welcome to javascript";
+        console.log("button clicked and its working");
+    }
+
+  </script>
+
+  ------------------------------------------------------------------------------
+  2.Ge3t Element By Id, Class name, tag name:
+     2.1 by id:
+  example:
+        <h1 id="heading">hello</h1>
+  <script>
+  let head = document.getElementById("heading");
+  head.style.color = "blue";
+  </script>
+
+
+  2.2 By Class Name:
+  Example:
+   <p class="text">this is a paragraph</p>
+     <p class="text">we are learning javascript</p>
+    
+
+
+  <script>
+let para = document.getElementsByClassName("text");
+para[0].style.color = "red";  //first element
+para[1].style.color = "blue"; //second element
+  </script>
+
+
+2.3 By Tag name:
+Example:
+ <p>shamiksha</p>
+   <p>jayalakshmi</p>
+   <p>rubini</p>
+   <p>anu</p>
+
+
+  <script>
+    let p = document.getElementsByTagName('p');
+    p[3].textContent = "Anu Lakshmi 😊";
+  </script>
+
+
+  --------------------------------------------------------------------------------------------------
+  3.Append  && AppendChild:
+
+  AppendChild:
+
+Examples:
+ 
+   <div id="container">DOM</div>
+
+
+  <script>
+    const div = document.getElementById("container");//<div>dom</div>
+    const para = document.createElement("p");//<p></p>
+    para.textContent="this is para";//<p>this is para</p>
+  div.appendChild(para);//<div>dom<p>this is para</p></div>
+  </script>
+
+
+  append:
+  Example:
+  <div id="box"></div>
+
+
+  <script>
+    const box = document.getElementById("box");//<div></div>
+    const p1 = document.createElement("p");//<p></p>
+    p1.textContent = "Hello World";//<p>Hello World</p>
+     const p2 = document.createElement("p");//<p></p>
+    p2.textContent = "Welcome to JavaScript";//<p>Welcome to JavaScript</p>
+    
+    box.append(p1, p2, "Have a great day!");//<div><p>Hello World</p><p>Welcome to JavaScript</p>Have a great day!</div>
+  </script>
+  ----------------------------------------------------------------------------------------------------------------------------------
+  4.selecting & manapulating  Elements:
+
+  1.change text
+  2.change style
+  3.change atrribute:
+  example:
+
+  <h1 id="title">Hi</h1>
+<img id="image" src="old.jpg">
+
+  <script>
+    const title= document.getElementById("title");
+    title.textContent = "Hello World!";
+    title.style.color = "blue";
+
+
+
+    const img = document.getElementById("image");
+    img.setAttribute("src", "new.jpeg");
+   
+  </script>
+  -----------------------------------------------------------------------------------------------------------
+  5.queryselector() & queryselectorall()
+5.1 query selector():
+Example:
+ <h1 class="head">hello</h1>
+   <h1 class = "head">hai</h1>
+
+
+  <script>
+   const h = document.querySelector('.head');
+   h.style.color = 'red';
+  </script>
+
+5.2 query selectorall():
+Example:
+ <p class="para">one</p>
+ <p class="para">two</p>
+ <p class="para">three</p>
+
+  <script>
+    const paras =document.querySelectorAll('.para');
+    paras.forEach(p =>{
+        p.style.color ='blue';
+    });
+  </script>
+  --------------------------------------------------------------------------------------------------------------------
+  6.Events:
+  6.1 Onlick(inline):
+  Example:
+
+  <button onclick="alert('button clicked')">click me</button>
+
+
+
+  Example2(inside the function):(dom property)
+    <button onclick="alert('button clicked')">click me</button>
+  <button id="btn">click</button>
+
+<script>
+    document.getElementById("btn").onclick = function(){
+        alert("button clicked")
+    };
+</script>
+
+
+
+
+method3:
+Example:
+  <button id="btn">click</button>
+
+<script>
+   document.getElementById('btn').addEventListener('click', function() {
+       alert('Button was clicked!');
+   });
+</script>
+----------------------------------------------------------------------------------------------------
+7.mouseover,mouseout:
+
+  <button id="btn">click</button>
+
+<script>
+ const bt = document.getElementById('btn');
+ btn.onmouseover = ()=> btn.style.background ="pink";
+ btn.onmouseout = ()=> btn.style.background ="purple";
+    btn.onclick = ()=> alert("you clicked me");
+</script>
+-----------------------------------------------------------------------------
+8.omkeyup:
+input type="text" id="box" placeholder="type something">
+
+ 
+
+<script>
+    document.getElementById("box").onkeyup = function()
+    {
+        console.log("You typed: " + this.value);
+    }
+ 
+</script>
+--------------------------------------------------------------------------------------------
+9.onsubmit,onfocus:
+<form onsubmit="alert('form submitted')">
+    <input type="text" onfocus="this.style.color='lightblue'">
+
+    <input type="submit" value="Submit">
+</form>
+---------------------------------------------------------------------------------------------
+10.onscroll &onload:
+
+ 
+<h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quasi sapiente architecto unde dolorem ipsam consequuntur quidem facilis, ex, similique explicabo. Quam, nulla. Aspernatur labore molestiae ex rerum, vero accusamus culpa quo in ad cumque. Omnis soluta fugiat asperiores eveniet nemo quam eius cupiditate commodi deleniti placeat porro, quibusdam architecto ipsa modi nisi consectetur! Delectus accusamus voluptatem dolorum, accusantium ullam molestiae similique. Nostrum reprehenderit pariatur autem laudantium consequuntur. Incidunt quaerat quia laudantium exercitationem possimus aperiam officia, similique expedita quod sint iure dolorem tenetur ipsa necessitatibus veniam nostrum sed adipisci harum architecto pariatur fugiat perspiciatis quisquam! Optio, reprehenderit esse. Pariatur, quam!
+</h1>
+ 
+
+<script>
+    window.onload=()=>console.log("Page Loaded");
+    window.onscroll=()=>console.log("Page Scrolled");
+ 
+</script>
+------------------------------------------------------------------------------------------------------
+ drag &drop
+ 
+<div id="drag" draggable="true" style="width:100px; height:100px; background-color:blue;"></div>
+<div id="drop" style="width:200px; height:200px; background-color:yellow; margin-top:20px;"></div>
+
+<script>
+const drag = document.getElementById('drag');
+const drop = document.getElementById('drop');
+drop.ondragover= (e)=>e.preventDefault();
+drop.ondrop=() =>drop.append(drag);
+ 
+</script>
+
+  
+
+
+
+
+
+
+
+

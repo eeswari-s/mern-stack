@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+
+    </div>
+    </div>
+</head>
+<body>
+ 
+<div id="drag" draggable="true" style="width:100px; height:100px; background-color:blue;"></div>
+<div id="drop" style="width:200px; height:200px; background-color:yellow; margin-top:20px;"></div>
+
+<script>
+const drag = document.getElementById('drag');
+const drop = document.getElementById('drop');
+drop.ondragover= (e)=>e.preventDefault();
+drop.ondrop=() =>drop.append(drag);
+ 
+</script>
+</body>
+</html>
