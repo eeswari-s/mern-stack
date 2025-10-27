@@ -1,0 +1,97 @@
+java script: single threated execute single task at the time.
+
+synchronous:block---js(we can synchronous to Asynchronous(Example:call back function)):
+              which execute all the code line by line.(block)
+
+
+Asynchronous:non-blocking(Ex:map,callback)
+         programming you can do task without waiting for a task to complete its execution.(non-blocking).
+
+
+1.callback function:
+                   callback function is a function that is passed as an argument to another function.
+
+    Example:
+            function greetings(name ,callback)
+{
+    console.log("hello "+name);//printing the name
+    callback();//calling the function 
+
+}
+
+function sayGoodBye()
+{
+    console.log("tata");
+}
+
+
+greetings("Naveen",sayGoodBye);//Passing the function as an argument
+
+-----------------------------------------------------------------------------------------------
+2.setTimeout():
+                this method execute a function, afterr waiting specific number of milliseconds.
+
+    syntax:
+           setTimeout(function,millisecond);
+
+   Example:
+              <button onclick="setTimeout(timeout,5000)">submit</button>
+              <script>
+              function start()
+             {
+             console.log("started");
+             setTimeout(timeout,3000);
+               }
+</script>
+
+  Task:print in UI
+------------------------------------------------------------------------------------------
+3.setInterval():
+                 this method repeat a given function at every given time interval.
+    syntax:
+           setInterval(function,millisecond)
+
+           Example:
+              <h1>Set timeout</h1>
+    <button onclick="setInterval(timeout,5000)">submit</button>
+   
+    <script>
+        function timeout()
+      {
+    console.log("timeout");
+     }
+
+    </script>
+
+
+    Task:UI
+stack:
+      it is place in browser where it keep tracks the function that has to be called in a diagram.
+
+    webapi :
+                 it is place whee the async operation are actually executed.
+    Event queue:
+                 queue is data structue first come first out(FIFO).
+                 it stores the async funtion which has to be executed next.
+    ---------------------------------------------------
+    callbackhell:
+     console.log("started");
+setTimeout(()=>
+{
+    console.log("third");
+    setTimeout(()=>
+    {
+        console.log("second");
+        setTimeout(()=>
+        {
+            console.log("first");
+        },5000);
+    },3000);
+},2000);
+
+console.log("ended");
+---------------------------------------------------------------
+
+
+
+  
