@@ -65,6 +65,8 @@ greetings("Naveen",sayGoodBye);//Passing the function as an argument
 
 
     Task:UI
+
+    
 stack:
       it is place in browser where it keep tracks the function that has to be called in a diagram.
 
@@ -74,7 +76,7 @@ stack:
                  queue is data structue first come first out(FIFO).
                  it stores the async funtion which has to be executed next.
     ---------------------------------------------------
-    callbackhell:
+   4 callbackhell:
      console.log("started");
 setTimeout(()=>
 {
@@ -91,7 +93,8 @@ setTimeout(()=>
 
 console.log("ended");
 ---------------------------------------------------------------
-
+for ,for each, map
+-----------------------------------------------------
 
 
   

@@ -1,0 +1,134 @@
+pROMISE:
+             It holds the result of async operations.
+        need of promise: to overcome callback hell scenerio.
+        it is an objecyt,which is holds reasult of the operation.
+
+        syntax:
+                var variableName = new promise((resolve,reject));
+
+
+for every promise objecytwe have state 
+1.pending 
+2.fulfilled
+3.rejected 
+
+Example:
+var a = new Promise((resolve,reject)=>
+{
+    if(5>10)
+    {
+         resolve("success")
+       
+    }
+    else
+    {
+         reject("failure")
+      
+    }
+});
+console.log(a);
+
+//task:
+          you are eligible to vote /  17 not eligible to vot
+
+-------------------------------------------------------------------------------------------------------------------
+2. .then  :
+               its handles promise resolve state 
+               if function return promise 
+               if bothe resolve and reject is given depend on order
+
+               Example:
+                       function one(num)
+{
+    return new Promise((resolve,reject)=>{
+    resolve("This is resolve");
+    reject("This is reject");
+   
+});
+}
+one("a").then((data)=>{console.log(data);})
+--------
+.catch:
+      function one(num)
+{
+    return new Promise((resolve,reject)=>{
+    resolve("This is resolve");
+    reject("This is reject");
+   
+});
+}
+one("m").then((data)=>console.log(data)).catch((data)=>console.log(data));
+-------------------------------
+4.chaining of promise:
+                      the result of first will be served as input to second 
+
+                Example:
+                function chain(num){
+    return new Promise((resolve,reject)=>setTimeout(()=>resolve(num*2),2000))
+};
+chain(5).then((data)=>
+{
+    console.log(data);
+    return chain(data);
+}).then((data1)=>{
+    console.log(data1);
+    return chain(data1);
+}).then((data2)=>{
+    console.log(data2);
+    
+});
+---------------------------------------------------------------
+5.promise.all():
+                when you  have multiple promises
+                it will wait until all the promise are getting resolved
+                and then it return an array of value.
+
+        Example:
+              var p1= new Promise((resolve,reject)=>{
+    if(true){
+        setTimeout(()=>resolve("promise 1 resolved"),3000);
+    }
+    else{
+        setTimeout(()=>reject("promise 1 rejected"),6000);
+    }
+})
+
+
+var p2= new Promise((resolve,reject)=>{
+    if(true){
+        setTimeout(()=>resolve("promise 2 resolved"),2000);
+    }
+    else{
+        setTimeout(()=>reject("promise 2 rejected"),4000);
+    }
+})
+
+
+
+var p3= new Promise((resolve,reject)=>{
+    if(false){
+        setTimeout(()=>resolve("promise 3 resolved"),4000);
+    }
+    else{
+        setTimeout(()=>reject("promise 3 rejected"),8000);
+    }
+})
+Promise.all([p1,p2,p3]).then((data)=>console.log(data)).catch((data)=>console.log(data));
+----------------------------------------------
+6.Hoisting:
+           Means javascript moves all variable and function declarations to the top of the their scope (global or function scope)before code exacution.
+           but only declarations are hoisted,not initializations(assignment)'
+--------------
+Function Hoisting:
+
+Example:
+          sayHi();//Cannot access 'sayHi' before initialization
+
+           const sayHi=function() {
+          console.log("hello");
+            };
+--------------------------------------------------------------------------------------------------
+
+            
+                   
+        
