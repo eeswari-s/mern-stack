@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+        <style>
+    body {font-family:Arial, sans-serif;background:#eaeded;margin:0;}
+    .container {
+      max-width:1000px;margin:40px auto;background:white;
+      border-radius:10px;padding:20px;display:flex;gap:30px;
+      box-shadow:0 3px 8px rgba(0,0,0,0.1);
+    }
+    img {width:45%;border-radius:10px;object-fit:contain;background:#f8f8f8;}
+    .details {flex:1;}
+    h2 {margin:0 0 10px 0;}
+    .price {color:#B12704;font-size:22px;font-weight:bold;margin:10px 0;}
+    .desc {color:#333;margin-top:10px;line-height:1.4;}
+    button {
+      margin-top:20px;padding:10px 20px;border:none;border-radius:6px;
+      background:#ffd814;font-weight:bold;cursor:pointer;
+    }
+    button:hover {background:#f7ca00;}
+    .back {margin:20px;cursor:pointer;color:#007185;}
+  </style>
+</head>
+<body>
+    <div class="back" onClick="history.back()">⬅️Back</div>
+    <div class="container" id="product"></div>
+    <script>
+    const container = document.getElementById("product");
+    const p = JSON.parse(localStorage.getItem("selectedProduct"));
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (!p) {
+      container.innerHTML = "<p style='padding:20px;'>No product selected.</p>";
+    } else {
+      container.innerHTML = `
+        <img src="${p.thumbnail}" alt="${p.title}">
+        <div class="details">
+          <h2>${p.title}</h2>
+          <p class="price">₹${(p.price * 85).toFixed(0)}</p>
+          <p>${p.brand || ""}</p>
+          <p class="desc">${p.description}</p>
+          <button id="addBtn">Add to Cart</button>
+        </div>
+      `;
+      document.getElementById("addBtn").addEventListener("click", () => {
+        cart.push(p);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Added to cart!");
+        location.href = "cart.html";
+      });
+    }  
+
+    </script>
+</body>
+</html>

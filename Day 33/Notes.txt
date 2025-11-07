@@ -1,0 +1,74 @@
+1.template literals(Backtic ``):
+                                 Used to embed variabkles and write multi-line strings easily.
+                                 Example:
+                                 let myname ="EESwari";
+let course = "javascript";
+
+console.log(`Hello ${myname},Welcome to ${course} course`);
+console.log("hello " + myname + ",Welcome to " + course + " course");
+----------------------------------------------------------------------------------------
+2.Array & Object destructuring:
+                            destructuring= unpacking values from array/object into variables easily.
+                
+
+Array:
+       const fruits= ["apple", "banana", "orange"];
+
+const [first, second, third] = fruits;
+
+console.log(first);
+console.log(second);
+console.log(third);
+
+
+object:
+        const user = {
+    fname: "EESwari",
+    age: 26,
+    city: "Chennai"
+};
+
+const { fname, age, city } = user;
+console.log(fname);
+console.log(age);
+console.log(city);
+
+------------------------------------------------------------------------------
+3.Arrow function:
+ Arrow function= shorter syntax for normal function + automatic this binding.
+
+ Example:
+ function greets (ffname){
+    return `Hello ${ffname}`
+}
+ //arrow function:
+      const greet =(fname)=>'Hello${fname}';
+----------------------------------------------------------------------------------------------
+4. spread operator(...)
+   the same symbol ... works differently based on usage.
+
+   spread-Exapand values.
+Example:
+const arr1 = [1,2,3,4,5];
+const arr2 = [6,7,8,9,10];
+
+const combined =[...arr1,...arr2];
+
+console.log(combined);
+
+-------------------------------------------------------------------------
+5.Rest operator:
+                 used in function parameters or destructuring.
+
+                 Example:
+                 function sum(...numbers)
+{
+    return numbers.reduce((acc,cur)=>acc + cur, 0);
+}
+console.log(sum(10,20,30));
+    
+
+const [second, ...rest]=[1,2,3,4];
+ console.log(second);
+console.log(rest);
+-----------------------------------------------------------------------------------------------------------

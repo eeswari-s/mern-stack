@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Mini Clone</title>
+     <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+    body {background:#eaeded;color:#111;}
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background:#131921;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:10px 20px;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+    .logo {font-size:22px;font-weight:bold;color:#ff9900;}
+    .search-box {display:flex;width:50%;}
+    .search-box input {
+      flex:1;padding:8px;border:none;border-radius:4px 0 0 4px;font-size:15px;
+    }
+    .search-box button {
+      background:#febd69;border:none;padding:8px 15px;border-radius:0 4px 4px 0;
+      font-weight:bold;cursor:pointer;
+    }
+    .cart-icon {color:white;font-size:16px;cursor:pointer;}
+    .cart-icon span {background:#f08804;padding:3px 7px;border-radius:50%;margin-left:5px;}
+
+    /* ===== CATEGORY BAR ===== */
+    .category-bar {
+      background:white;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      padding:10px;
+      gap:10px;
+      box-shadow:0 1px 5px rgba(0,0,0,0.1);
+    }
+    .category-bar button {
+      background:#232f3e;color:white;border:none;padding:8px 15px;border-radius:6px;
+      cursor:pointer;transition:0.3s;
+    }
+    .category-bar button:hover {background:#37475a;}
+
+    /* ===== PRODUCT GRID ===== */
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
+      gap:20px;
+      padding:20px;
+      max-width:1200px;
+      margin:auto;
+    }
+    .card {
+      background:white;border-radius:10px;overflow:hidden;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      display:flex;flex-direction:column;transition:0.2s;
+    }
+    .card:hover {transform:translateY(-4px);}
+    .card img {width:100%;height:200px;object-fit:contain;background:#f8f8f8;}
+    .card .content {padding:12px;}
+    .card h3 {font-size:15px;font-weight:600;height:38px;}
+    .price {color:#B12704;font-weight:bold;margin:5px 0;}
+    .buttons {display:flex;gap:8px;}
+    .btn {
+      flex:1;padding:8px;border:none;border-radius:6px;cursor:pointer;font-weight:bold;
+    }
+    .view {background:#007185;color:white;}
+    .cart {background:#ffd814;}
+    .cart:hover {background:#f7ca00;}
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">amazon<span style="color:white">.mini</span></div>
+        <div class="search-box">
+            <input id="search" type="text" placeholder="search products...."/>
+            <button id="searchBtn">Search</button>
+
+        </div>
+        <div class="cart-icon" onClick="location.href='cart.html'">
+            🛒Cart <span id="cartCount">0</span>
+        </div>
+    </div>
+    <div id="categoryBar" class="category-bar"></div>
+
+    <div id="grid" class="grid"></div>
+   <script>
+    const grid = document.getElementById("grid");
+    const categoryBar = document.getElementById("categoryBar");
+    const search = document.getElementById("search");
+    const searchBtn = document.getElementById("searchBtn");
+    const cartCount = document.getElementById("cartCount");
+
+    let products = [];
+    let filtered = [];
+    let cart = JSON.parse(localStorage.getItem("cart")) ||  [];
+
+
+    //Fetch Products
+    fetch("https://dummyjson.com/products")
+    .then(res=>res.json())
+.then(data=>{
+        products = data.products;
+        filtered = [...products];
+        loadCategories();
+        showAll();
+        
+    });
+
+
+//Load Categories under navbar
+    function loadCategories() {
+      const cats = [...new Set(products.map(p => p.category))];
+      categoryBar.innerHTML = `<button onclick="showAll()">All</button>`;
+      cats.forEach(c => {
+        const btn = document.createElement("button");
+        btn.textContent = c;
+        btn.onclick = () => filterByCategory(c);
+        categoryBar.appendChild(btn);
+      });
+    }
+
+    function showAll() {
+      filtered = [...products];
+      renderProducts();
+    }
+
+    function filterByCategory(cat) {
+      filtered = products.filter(p => p.category === cat);
+      renderProducts();
+    }
+
+
+    function renderProducts() {
+      grid.innerHTML = "";
+      filtered.forEach(p => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <img src="${p.thumbnail}" alt="${p.title}">
+          <div class="content">
+            <h3>${p.title}</h3>
+            <p class="price">₹${(p.price * 85).toFixed(0)}</p>
+            <div class="buttons">
+              <button class="btn view">View Details</button>
+              <button class="btn cart">Add to Cart</button>
+            </div>
+          </div>
+        `;
+        // View Details
+        card.querySelector(".view").addEventListener("click", () => {
+          localStorage.setItem("selectedProduct", JSON.stringify(p));
+          location.href = "product.html";
+        });
+        // Add to Cart
+        card.querySelector(".cart").addEventListener("click", () => {
+          cart.push(p);
+          localStorage.setItem("cart", JSON.stringify(cart));
+          cartCount.textContent = cart.length;
+          alert("Added to cart!");
+        });
+        grid.appendChild(card);
+      });
+    }
+
+    // Search
+    searchBtn.addEventListener("click", () => {
+      const term = search.value.toLowerCase();
+      filtered = products.filter(p => p.title.toLowerCase().includes(term));
+      renderProducts();
+    });
+   </script> 
+</body>
+</html>
